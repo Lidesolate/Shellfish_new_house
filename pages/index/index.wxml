@@ -1,0 +1,275 @@
+<!--index.wxml-->
+<view class="app">
+  <view class="couponBox">
+    <view class="header clearfix">
+      <view class="title fl">{{mainData.data.house_info.title}}</view>
+      <view class="label fl labelOne">商城</view>
+      <view class="label fl labelTow">在售</view>
+    </view>
+    <view class="alias">别名：{{mainData.data.house_info.seTitle}}</view>
+    <view class="image">
+      <view class="image-left">
+        <image src="/assets/house2.png"></image>
+      </view>
+      <view class="image-right">
+        <view class="top">
+          <image src="/assets/house3.png"></image>
+        </view>
+        <view class="bottom">
+          <image src="/assets/house3.png"></image>
+        </view>
+      </view>
+    </view>
+    <view class="type clearfix">
+      <view class="price">
+        <view class="type-title">售价</view>
+        <view class="type-details">{{mainData.data.house_info.price}}万</view>
+      </view>
+      <view class="house">
+        <view class="type-title">房型</view>
+        <view class="type-details">{{mainData.data.house_info.type}}</view>
+      </view>
+      <view class="area">
+        <view class="type-title">建筑面积</view>
+        <view class="type-details">{{mainData.data.house_info.area}}m</view>
+      </view>
+    </view>
+    <view class="box clearfix">
+      <view class="time fl">开盘时间：</view>
+      <view class="specific-time fl">{{mainData.data.house_info.open_time}}</view>
+      <image src="/assets/more.png" class="fr more"></image>
+    </view>
+    <view class="box clearfix">
+      <view class="time fl">地址：</view>
+      <view class="specific-time fl">{{mainData.data.house_info.address}}</view>
+      <image src="/assets/more.png" class="fr more"></image>
+    </view>
+    <view class="coupon">
+      <image src="/assets/bg.png" class="bg"></image>
+      <image src="/assets/Coupon.png" class="couponIcon"></image>
+      <view class="coupon-title">全款9.8折，贷款9.9折</view>
+      <button class="btn">领优惠</button>
+    </view>
+    <view class="more-btn">更多房源信息</view>
+  </view>
+  <view class="detailsBox">
+    <view class="tab clearfix">
+      <view class="tab-item" wx:for="{{mainData.data.typs_conditions}}" wx:key="">
+        {{item.name}}
+      </view>
+    </view>
+    <view class="tab-list">
+      <view class="listItem clearfix">
+        <view class="item-image fl">
+          <image src="/assets/house.png">
+          </image>
+        </view>
+        <view class="item-details fl">
+          <view class="clearfix">
+            <view class="item-title fl">四室一厅两卫</view>
+            <view class="label fl labelOne">商城</view>
+            <view class="label fl labelTow">在售</view>
+          </view>
+          <view class="item-area">
+            建面191m/南北向
+          </view>
+          <view class="clearfix">
+            <view class="item-label">
+              多卫
+            </view>
+            <view class="item-label">
+              干湿分离
+            </view>
+            <view class="item-label">
+              户型方正
+            </view>
+          </view>
+          <view class="item-price">
+            约1630万/套
+          </view>
+        </view>
+      </view>
+      <view class="listItem clearfix">
+        <view class="item-image fl">
+          <image src="/assets/house.png"></image>
+        </view>
+        <view class="item-details fl">
+          <view class="clearfix">
+            <view class="item-title fl">四室一厅两卫</view>
+            <view class="label fl labelOne">商城</view>
+            <view class="label fl labelTow">在售</view>
+          </view>
+          <view class="item-area">
+            建面191m/南北向
+          </view>
+          <view class="clearfix">
+            <view class="item-label">
+              多卫
+            </view>
+            <view class="item-label">
+              干湿分离
+            </view>
+            <view class="item-label">
+              户型方正
+            </view>
+          </view>
+          <view class="item-price">
+            约1630万/套
+          </view>
+        </view>
+      </view>
+      <view class="listItem clearfix">
+        <view class="item-image fl">
+          <image src="/assets/house.png"></image>
+        </view>
+        <view class="item-details fl">
+          <view class="clearfix">
+            <view class="item-title fl">四室一厅两卫</view>
+            <view class="label fl labelOne">商城</view>
+            <view class="label fl labelTow">在售</view>
+          </view>
+          <view class="item-area">
+            建面191m/南北向
+          </view>
+          <view class="clearfix">
+            <view class="item-label">
+              多卫
+            </view>
+            <view class="item-label">
+              干湿分离
+            </view>
+            <view class="item-label">
+              户型方正
+            </view>
+          </view>
+          <view class="item-price">
+            约1630万/套
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+  <view class="commentBox">
+    <view class="user-comment clearfix">
+      <view class="title fl">用户评论</view>
+      <image src="/assets/more.png" class="fr more"></image>
+      <view class="more-comment fr">更多点评</view>
+    </view>
+    <view class="grade clearfix">
+      <image src="/assets/Star.png" class="star"></image>
+      <image src="/assets/Star.png" class="star"></image>
+      <image src="/assets/Star.png" class="star"></image>
+      <image src="/assets/Star.png" class="star"></image>
+      <image src="/assets/Star1.png" class="star"></image>
+      <view class="fl last-grade">综合</view>
+      <view class="fl num">4.0</view>
+      <view class="fl last-grade">分</view>
+    </view>
+    <view class="others-grade clearfix">
+      <view wx:for="{{mainData.data.comments.tab_score}}" wx:key="">
+        {{item.name}}{{item.score}}
+      </view>
+      <!-- <view class="line"></view> -->
+    </view>
+    <view class="wrie"></view>
+    <view class="userComment clearfix">
+      <view class="item-comment">
+        全部点评(6)
+      </view>
+      <view class="item-comment">
+        用户实看(6)
+      </view>
+      <view class="item-comment">
+        用户购买(6)
+      </view>
+      <view class="item-comment">
+        好评(6)
+      </view>
+      <view class="item-comment">
+        差评(6)
+      </view>
+    </view>
+    <view class="comment-details">
+      <view wx:for="{{mainData.data.comments.comment}}" wx:key="">
+        <view class="user-details clearfix">
+          <view class="user-image fl">
+            <image src="{{item.user_image}}"></image>
+          </view>
+          <view class="others fl">
+            <view class="user-name">{{item.user_name}}</view>
+            <view class="user-star clearfix others-grade">
+              <image src="/assets/starSmall.png" class="small"></image>
+              <image src="/assets/starSmall.png" class="small"></image>
+              <image src="/assets/starSmall.png" class="small"></image>
+              <image src="/assets/starSmall.png" class="small"></image>
+              <image src="/assets/starSmall.png" class="small"></image>
+              <view wx:for="{{item.user_score}}" wx:key="">
+                {{item.name}}{{item.score}}
+              </view>
+              <!-- <view class="line"></view> -->
+              
+            </view>
+          </view>
+        </view>
+        <view class="comment-text">
+          {{item.user_comment}}
+        </view>
+        <view class="all-text">全文</view>
+        <view class="issue-time">{{item.create_time}}</view>
+      </view>
+    </view>
+  </view>
+  <view class="question">
+    <view class="user-comment clearfix">
+      <view class="title fl">买房问大家(1390)</view>
+      <image src="/assets/more.png" class="fr more"></image>
+      <view class="more-comment fr">更多点评</view>
+    </view>
+    <view class="question-list">
+      <view class="list-item clearfix" wx:for="{{mainData.data.questions}}" wx:key="">
+        <view class="fl wen">
+            <image src="/assets/ask.png"></image>
+        </view>
+        <view class="fl right">
+          <view class="question-title ">
+            {{item.question}}
+          </view>
+          <view class="clearfix">
+            <view class="follow">
+              {{item.attention_num}}人关注
+            </view>
+            <view class="answer">{{item.answer_num}}个回答</view>
+          </view>
+        </view>
+      </view>
+      <!-- <view class="wrie"></view> -->
+    </view>
+  </view>
+  <view class="recommend">
+    <view class="user-comment clearfix">
+      <view class="title fl">周边推荐</view>
+      <image src="/assets/more.png" class="fr more"></image>
+      <view class="more-comment fr">更多点评</view>
+    </view>
+    <view class="recommend-list clearfix">
+      <view class="list">
+        <view class="recommend-item fl" wx:for="{{mainData.data.hotlists}}" wx:key="">
+          <view class="recommend-image">
+            <image src="{{item.image}}"></image>
+          </view>
+          <view class="clearfix">
+            <view class="recommend-title fl">{{item.title}}</view>
+            <view class="label fl labelTow">住宅</view>
+          </view>
+          <view class="address">{{item.address}}</view>
+          <view class="recommend-price">均价{{item.uprice}}元/平 </view>
+        </view>
+      </view>
+    </view>
+  </view>
+  <view class="presell">预售许可证： 京房售证字（2017）7号</view>
+  <view class="btns clearfix">
+    <view class="btn-red fl">询优惠</view>
+    <view class="btn-blue fr">联系售楼处</view>
+  </view>
+</view>
